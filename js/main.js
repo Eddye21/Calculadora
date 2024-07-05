@@ -47,7 +47,7 @@ do {
             break
         default:
             alert("Error en la operacion")
-        break
+            break
     }
     continuarOperacion = confirm("¿Desea continuar con las operaciones?")
     if(continuarOperacion == false){
