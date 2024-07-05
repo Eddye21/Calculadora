@@ -19,32 +19,35 @@ alert("Bienvenido")
 
 do {
     alert ("¿Que operacion hacer?")
-    operacion = prompt ("1: suma, 2: resta, 3: division, 4: multiplicacion")
-    if(operacion == "1"){
-        let numero1 = prompt("Valor 1")
-        let numero2 = prompt("Valor 2")
-        resultado = suma(numero1, numero2)
-        alert(`Tu resultado es ${resultado}`)
-    }
-    else if( operacion =="2"){
-        let numero1 = prompt("Valor 1")
-        let numero2 = prompt("Valor 2")
-        resultado = resta(numero1, numero2)
-        alert(`Tu resultado es ${resultado}`)
-    }
-    else if( operacion == "3"){
-        let numero1 = prompt("Valor 1")
-        let numero2 = prompt("Valor 2")
-        resultado = division(numero1, numero2)
-        alert(`Tu resultado es ${resultado}`)
-    }
-    else if( operacion == "4"){
-        let numero1 = prompt("Valor 1")
-        let numero2 = prompt("Valor 2")
-        resultado = multiplicacion(numero1, numero2)
-        alert(`Tu resultado es ${resultado}`)
-    }else{
-        alert("Error en la operacion")
+    operacion = parseInt(prompt ("1: suma, 2: resta, 3: division, 4: multiplicacion"))
+    switch(operacion){
+        case 1:
+            let primerValorSuma = prompt("Valor 1")
+            let segundoValorSuma = prompt("Valor 2")
+            resultado = suma(primerValorSuma, segundoValorSuma)
+            alert(`Tu resultado es ${resultado}`)
+            break
+        case 2: 
+            let primerValorResta = prompt("Valor 1")
+            let segundoValorResta = prompt("Valor 2")
+            resultado = resta(primerValorResta, segundoValorResta)
+            alert(`Tu resultado es ${resultado}`)
+            break
+        case 3: 
+            let primerValorDivision = prompt("Valor 1")
+            let segundoValorDivision = prompt("Valor 2")
+            resultado = division(primerValorDivision, segundoValorDivision)
+            alert(`Tu resultado es ${resultado}`)
+            break
+        case 4:
+            let primerValorMultiplicacion = prompt("Valor 1")
+            let segundoValorMultiplicaion = prompt("Valor 2")
+            resultado = multiplicacion(primerValorMultiplicacion, segundoValorMultiplicaion)
+            alert(`Tu resultado es ${resultado}`)
+            break
+        default:
+            alert("Error en la operacion")
+        break
     }
     continuarOperacion = confirm("¿Desea continuar con las operaciones?")
     if(continuarOperacion == false){
